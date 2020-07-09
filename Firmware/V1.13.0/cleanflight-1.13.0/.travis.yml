@@ -1,0 +1,60 @@
+# boards are ordered by priority so that when monitoring a build developers get feedback on the important ones first.
+env:
+  - RUNTESTS=True
+  - PUBLISHMETA=True
+  - PUBLISHDOCS=True
+  - TARGET=SPRACINGF3MINI
+  - TARGET=SPRACINGF3EVO
+  - TARGET=SPRACINGF3
+  - TARGET=NAZE
+  - TARGET=CC3D
+  - TARGET=CJMCU
+  - TARGET=SPARKY
+  - TARGET=COLIBRI_RACE
+  - TARGET=LUX_RACE  
+  - TARGET=MOTOLAB
+  - TARGET=RMDO
+  - TARGET=ALIENFLIGHTF3
+  - TARGET=ALIENFLIGHTF1
+  - TARGET=STM32F3DISCOVERY
+  - TARGET=PORT103R
+  - TARGET=EUSTM32F103RC
+  - TARGET=CHEBUZZF3
+  - TARGET=OLIMEXINO
+  - TARGET=NAZE32PRO
+  - TARGET=IRCFUSIONF3
+
+# use new docker environment
+sudo: false
+
+addons:
+  apt:
+    packages:
+      - build-essential
+      - git
+      - libc6-i386
+      - zlib1g-dev
+      - libssl-dev
+      - wkhtmltopdf
+      - libxml2-dev
+      - libxslt-dev
+
+# We use cpp for unit tests, and c for the main project.
+language: cpp
+compiler: clang
+
+before_install:
+  - curl --retry 10 --retry-max-time 120 -L "https://launchpad.net/gcc-arm-embedded/4.9/4.9-2015-q2-update/+download/gcc-arm-none-eabi-4_9-2015q2-20150609-linux.tar.bz2" | tar xfj -
+
+install:
+  - export PATH=$PATH:$PWD/gcc-arm-none-eabi-4_9-2015q2/bin
+
+before_script: arm-none-eabi-gcc --version
+script: ./.travis.sh
+
+cache: apt
+
+notifications:
+  irc: "chat.freenode.net#cleanflight"
+  use_notice: true
+  skip_join: true
