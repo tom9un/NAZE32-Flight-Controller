@@ -20,8 +20,8 @@ B. Modifikasi compile, source apa saja yg mau di nonaktifkan ada di :
 C. Compile sendiri, caranya :
 
    1. Baca File README.md di folder Firmware sebelum melakukan compile
-   2. Didalam folder cleanflight-1.11.0-NAZE, ketik ==> make TARGET=NAZE
-   3. Hasil ada di /obj/cleanflight_1.11.0_NAZE.hex
+   2. Pada consule OS, didalam folder cleanflight-1.11.0-NAZE, ketik ==> make TARGET=NAZE
+   3. Hasil compile ada di /obj/cleanflight_1.11.0_NAZE.hex
 
 D. NOTES
 
