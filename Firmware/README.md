@@ -1,5 +1,8 @@
-# Building in Mac OS X
-# --------------------
+# Sebelum compile source sendiri, pastikan beberapa sistem terpenuhi tergantung OS yang digunakan seperti dibawah ini :
+
+
+## Building in Mac OS X
+
 
 Building in Mac OS X can be accomplished in just a few steps:
 
@@ -8,7 +11,7 @@ Building in Mac OS X can be accomplished in just a few steps:
 * Checkout Cleanflight sourcecode through git
 * Build the code
 
-## Install general development tools (clang, make, git)
+### Install general development tools (clang, make, git)
 
 Open up a terminal and run `make`. If it is installed already, you should see a message like this, which means that you
 already have the required development tools installed:
@@ -36,7 +39,7 @@ installation, open up XCode and enter its preferences menu. Go to the "downloads
 
 [from the App Store]: https://itunes.apple.com/us/app/xcode/id497799835
 
-## Install ARM GCC 4.9 series compiler
+### Install ARM GCC 4.9 series compiler
 
 Cleanflight is built using the 4.9 series GCC compiler provided by the [GNU Tools for ARM Embedded Processors project][].
 
@@ -74,7 +77,7 @@ If `arm-none-eabi-gcc` couldn't be found, go back and check that you entered the
 [GNU Tools for ARM Embedded Processors project]: https://launchpad.net/gcc-arm-embedded
 [the older releases]: https://launchpad.net/gcc-arm-embedded/+download
 
-## Checkout CleanFlight sourcecode through git
+### Checkout CleanFlight sourcecode through git
 
 Enter your development directory and clone the [Cleanflight repository][] using the "HTTPS clone URL" which is shown on
 the right side of the Cleanflight GitHub page, like so:
@@ -87,13 +90,13 @@ This will download the entire Cleanflight repository for you into a new folder c
 
 [CleanFlight repository]: https://github.com/cleanflight/cleanflight
 
-## Build the code
+### Build the code
 
 Enter the cleanflight directory and run `make TARGET=NAZE` to build firmware for the Naze32. When the build completes,
 the .hex firmware should be available as `obj/cleanflight_NAZE.hex` for you to flash using the Cleanflight
 Configurator.
 
-## Updating to the latest source
+### Updating to the latest source
 
 If you want to erase your local changes and update to the latest version of the Cleanflight source, enter your
 cleanflight directory and run these commands to first erase your local changes, fetch and merge the latest
@@ -108,10 +111,10 @@ make TARGET=NAZE
 ```
 
 
+---
 
+## Building in Ubuntu
 
-# Building in Ubuntu
-# ------------------
 
 Building for Ubuntu platform is remarkably easy. The only trick to understand is that the Ubuntu toolchain,
 which they are downstreaming from Debian, is not compatible with Cleanflight. We suggest that you take an
@@ -123,7 +126,7 @@ the 4.9.3 compiler will work fine. For some, older compiler 4.8 (notably Sparky)
 suggest you build with 4.9.3 first, and try to see if you can connect to the CLI or run the Configurator.
 If you cannot, please see the section below for further hints on what you might do.
 
-## Setup GNU ARM Toolchain
+### Setup GNU ARM Toolchain
 
 Note specifically the last paragraph of Terry's PPA documentation -- Ubuntu carries its own package for
 `gcc-arm-none-eabi`, so you'll have to remove it, and then pin the one from the PPA.
@@ -150,7 +153,7 @@ For Ubuntu 12.04 (previous LTS, called Precise Penguin), you should pin:
 sudo apt-get install gcc-arm-none-eabi=4.9.3.2014q4-0precise12
 ```
 
-## Building on Ubuntu
+### Building on Ubuntu
 
 After the ARM toolchain from Terry is installed, you should be able to build from source.
 ```
@@ -173,7 +176,7 @@ $ ls -la obj/cleanflight_NAZE.hex
 
 You can use the Cleanflight-Configurator to flash the ```obj/cleanflight_NAZE.hex``` file.
 
-## Bricked/Bad build?
+### Bricked/Bad build?
 
 Users have reported that the 4.9.3 compiler for ARM produces bad builds, for example on the Sparky hardware platform.
 It is very likely that using an older compiler would be fine -- Terry happens to have also a 4.8 2014q2 build in his
@@ -187,7 +190,7 @@ sudo dpkg -i gcc-arm-none-eabi_4-8-2014q2-0saucy9_amd64.deb
 
 Make sure to remove `obj/` and `make clean`, before building again.
 
-## Updating and rebuilding
+### Updating and rebuilding
 
 Navigate to the local cleanflight repository and use the following steps to pull the latest changes and rebuild your version of cleanflight:
 
@@ -202,13 +205,13 @@ make
 Credit goes to K.C. Budd, AKfreak for testing, and pulsar for doing the long legwork that yielded this very short document.
 
 
+---
 
 
+## Building in windows
 
-# Building in windows
-# -------------------
 
-##Setup Cygwin
+### Setup Cygwin
 
 download the Setup*.exe from https://www.cygwin.com/
 
@@ -241,7 +244,7 @@ Continue with the Installation and accept all autodetected dependencies.
 ![Cygwin Installation](V1.14.2/cleanflight-1.14.2/docs/development/assets/007.cygwin_setup.png)
 
 
-##Setup GNU ARM Toolchain
+### Setup GNU ARM Toolchain
 
 ----------
 
@@ -258,7 +261,7 @@ add the "bin" subdirectory to the PATH Windows environment variable: ```%PATH%;C
 
 ![GNU ARM Toolchain Setup](V1.14.2/cleanflight-1.14.2/docs/development/assets/010.toolchain_path.png)
 
-## Checkout and compile Cleanflight
+### Checkout and compile Cleanflight
 
 Head over to the Cleanflight Github page and grab the URL of the GIT Repository: "https://github.com/cleanflight/cleanflight.git"
 
@@ -293,7 +296,7 @@ arm-none-eabi-objcopy -O ihex --set-start 0x8000000 obj/main/cleanflight_NAZE.el
 
 You can use the Cleanflight-Configurator to flash the ```obj/cleanflight_NAZE.hex``` file.
 
-## Updating and rebuilding
+### Updating and rebuilding
 
 Navigate to the local cleanflight repository and use the following steps to pull the latest changes and rebuild your version of cleanflight:
 
