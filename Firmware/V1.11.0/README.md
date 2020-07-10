@@ -5,9 +5,9 @@
 Repository hanya untuk NAZE32.
 
 
-A. Modifikasi source di /src
+#### A. Modifikasi source di /src
 
-B. Modifikasi compile, source apa saja yg mau di nonaktifkan ada di :
+#### B. Modifikasi compile, source apa saja yg mau di nonaktifkan ada di :
 
     /src/main/target/NAZE/target.h
 
@@ -17,13 +17,13 @@ B. Modifikasi compile, source apa saja yg mau di nonaktifkan ada di :
     #define GPS ==> menjadi //#define GPS
     ...
 
-C. Compile sendiri, caranya :
+#### C. Compile sendiri, caranya :
 
    1. Baca File README.md di folder Firmware sebelum melakukan compile
    2. Pada consule OS, didalam folder cleanflight-1.11.0-NAZE, ketik ==> make TARGET=NAZE
    3. Hasil compile ada di /obj/cleanflight_1.11.0_NAZE.hex
 
-D. NOTES
+#### D. NOTES
 
    IMPORTANT: ** Requires >= v1.1.0 configurator **
 
