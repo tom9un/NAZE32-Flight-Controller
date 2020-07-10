@@ -20,7 +20,7 @@ make: *** No targets specified and no makefile found.  Stop.
 If it isn't installed yet, you might get a popup like this. If so, click the "install" button to install the commandline
 developer tools:
 
-![Prompt to install developer tools](assets/mac-prompt-tools-install.png)
+![Prompt to install developer tools](V1.14.2/cleanflight-1.14.2/docs/development/assets/mac-prompt-tools-install.png)
 
 If you just get an error like this instead of a helpful popup prompt:
 
@@ -212,7 +212,7 @@ Credit goes to K.C. Budd, AKfreak for testing, and pulsar for doing the long leg
 
 download the Setup*.exe from https://www.cygwin.com/
 
-![Cygwin Installation](assets/001.cygwin_dl.png)
+![Cygwin Installation](V1.14.2/cleanflight-1.14.2/docs/development/assets/001.cygwin_dl.png)
 
 Execute the download Setup and step through the installation  wizard (no need to customize the settings here). Stop at the  "Select Packages" Screen and select the following Packages
 for Installation:
@@ -225,20 +225,20 @@ for Installation:
 - Editors/vim-common (Optional)
 - Shells/mintty (should be already selected)
 
-![Cygwin Installation](assets/002.cygwin_setup.png)
+![Cygwin Installation](V1.14.2/cleanflight-1.14.2/docs/development/assets/002.cygwin_setup.png)
 
-![Cygwin Installation](assets/003.cygwin_setup.png)
+![Cygwin Installation](V1.14.2/cleanflight-1.14.2/docs/development/assets/003.cygwin_setup.png)
 
-![Cygwin Installation](assets/004.cygwin_setup.png)
+![Cygwin Installation](V1.14.2/cleanflight-1.14.2/docs/development/assets/004.cygwin_setup.png)
 
-![Cygwin Installation](assets/005.cygwin_setup.png)
+![Cygwin Installation](V1.14.2/cleanflight-1.14.2/docs/development/assets/005.cygwin_setup.png)
 
-![Cygwin Installation](assets/006.cygwin_setup.png)
+![Cygwin Installation](V1.14.2/cleanflight-1.14.2/docs/development/assets/006.cygwin_setup.png)
 
 
 Continue with the Installation and accept all autodetected dependencies.
 
-![Cygwin Installation](assets/007.cygwin_setup.png)
+![Cygwin Installation](V1.14.2/cleanflight-1.14.2/docs/development/assets/007.cygwin_setup.png)
 
 
 ##Setup GNU ARM Toolchain
@@ -250,13 +250,13 @@ versions do matter, 4.8-2014-q2 is known to work well. Download this version fro
 
 Extract the contents of this archive to any folder of your choice, for instance ```C:\dev\gcc-arm-none-eabi-4_8-2014q2```.
 
-![GNU ARM Toolchain Setup](assets/008.toolchain.png)
+![GNU ARM Toolchain Setup](V1.14.2/cleanflight-1.14.2/docs/development/assets/008.toolchain.png)
 
 add the "bin" subdirectory to the PATH Windows environment variable: ```%PATH%;C:\dev\gcc-arm-none-eabi-4_8-2014q2\bin```
 
-![GNU ARM Toolchain Setup](assets/009.toolchain_path.png)
+![GNU ARM Toolchain Setup](V1.14.2/cleanflight-1.14.2/docs/development/assets/009.toolchain_path.png)
 
-![GNU ARM Toolchain Setup](assets/010.toolchain_path.png)
+![GNU ARM Toolchain Setup](V1.14.2/cleanflight-1.14.2/docs/development/assets/010.toolchain_path.png)
 
 ## Checkout and compile Cleanflight
 
@@ -268,9 +268,9 @@ Open the Cygwin-Terminal, navigate to your development folder and use the git co
 cd /cygdrive/c/dev
 git clone https://github.com/cleanflight/cleanflight.git
 ```
-![GIT Checkout](assets/011.git_checkout.png)
+![GIT Checkout](V1.14.2/cleanflight-1.14.2/docs/development/assets/011.git_checkout.png)
 
-![GIT Checkout](assets/012.git_checkout.png)
+![GIT Checkout](V1.14.2/cleanflight-1.14.2/docs/development/assets/012.git_checkout.png)
 
 To compile your Cleanflight binaries, enter the cleanflight directory and build the project using the make command. You can append TARGET=[HARDWARE] if you want to build anything other than the default NAZE target:
 
@@ -279,7 +279,7 @@ cd cleanflight
 make TARGET=NAZE
 ```
 
-![GIT Checkout](assets/013.compile.png)
+![GIT Checkout](V1.14.2/cleanflight-1.14.2/docs/development/assets/013.compile.png)
 
 within few moments you should have your binary ready:
 
