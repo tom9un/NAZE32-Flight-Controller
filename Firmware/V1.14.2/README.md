@@ -62,7 +62,7 @@ Repository hanya untuk NAZE32.
 
   NAZE :
 
-  - Dropped support for I2C display due to code size reasons. See #2472
+  - Dropped support for I2C display due to code size reasons.
 
   Changes since v1.14.0 :
 
