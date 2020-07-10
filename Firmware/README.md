@@ -1,4 +1,4 @@
-# Sebelum compile source sendiri, pastikan beberapa sistem terpenuhi tergantung OS yang digunakan seperti dibawah ini :
+# Kebutuhan sebelum melakukan compile sendiri :
 
 
 ## Building in Mac OS X
