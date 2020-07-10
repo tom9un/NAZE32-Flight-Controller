@@ -7,40 +7,30 @@
 3. Untuk memprogram FC NAZE32 menggunakan Configurator di folder Flight Configurator
 4. Baca README dan BACA, baca dokumentasi di Firmware/V*/cleanflight*/docs/
 <br />
-<br />
-<br />
-<br />
+
+---
 
 #### Versi NAZE32 rev6 :
-
 <p align="center">
   <img src="/PIC/versi-NAZE32.jpg" width="875">
 </p>
 <br />
-<br />
-<br />
-<br />
+
+---
 
 #### Konfigurasi pin :
-
-
 ![ini](/PIC/Nazer32-rev6-pinout.jpg)
 <br />
-<br />
-<br />
-<br />
+
+---
 
 #### Koneksi dengan GPS :
-
 ![ini](/PIC/NAZEtoGPS.jpg)
 <br />
-<br />
-<br />
-<br />
-<br />
+
+---
 
 #### Motor rotation dan arah gaya F :
-
 <p align="center">
   <img src="/PIC/drone.jpg" width="500">
 </p>
