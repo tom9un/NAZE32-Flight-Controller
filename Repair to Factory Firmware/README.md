@@ -2,7 +2,7 @@ Untuk default upload dengan firmware standar, saat NAZE32 error.
 
 Caranya :
 
-1. Satukan pin boot;
+1. Satukan pin bootloader;
 2. Colokan kabel data usb dari Naze32 ke Laptop;
 3. Pilih no reboot sequence pada cleanflight configurator;
 4. Pilih full chip erase;
