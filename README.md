@@ -1,6 +1,6 @@
 # NAZE32-Flight-Controller
 
-### Repo hanya untuk NAZE32 rev6
+### Repo Cleanflight hanya untuk NAZE32 rev6
 
 1. Untuk percobaan dan modifikasi firmware ada di folder Firmware
 2. Untuk memperbaiki error saat upload bisa gunakan firmware dasar yang ada di folder Repair to Factory Firmware
